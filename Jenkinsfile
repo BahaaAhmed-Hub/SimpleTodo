@@ -10,6 +10,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('backend') {
+                    echo "Hello" 
                     sh 'mvn clean package'
                 }
             }
