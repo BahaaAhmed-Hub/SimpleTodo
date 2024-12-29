@@ -11,7 +11,7 @@ pipeline {
             steps {
                 dir('backend') {
                     echo "Hello" 
-                    //sh 'mvn clean package'
+                    sh 'mvn clean package'
                 }
             }
         }
