@@ -16,8 +16,8 @@ pipeline {
                 dir('backend') {
                     echo "Hello" 
                     //sh 'mvn clean package'
-                    sh 'export MAVEN_HOME=/opt/maven'
-                    sh 'export PATH=$PATH:$MAVEN_HOME/bin'
+                    //sh 'export MAVEN_HOME=/opt/maven'
+                    //sh 'export PATH=$PATH:$MAVEN_HOME/bin'
                     sh 'mvn --version'
                 }
             }
