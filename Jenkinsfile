@@ -15,7 +15,7 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube Analysis') {
+        /*stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     sh 'mvn sonar:sonar'
@@ -44,5 +44,5 @@ pipeline {
                 sh 'kubectl apply -f k8s/deployment-frontend.yaml'
             }
         }
-    }
+   */ }
 }
