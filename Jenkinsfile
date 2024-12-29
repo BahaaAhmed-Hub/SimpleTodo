@@ -18,7 +18,7 @@ pipeline {
                     //sh 'mvn clean package'
                     //sh 'export MAVEN_HOME=/opt/maven'
                     //sh 'export PATH=$PATH:$MAVEN_HOME/bin'
-                    sh 'mvn --version'
+                    //sh 'mvn --version'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
                     sh 'mvn sonar:sonar'
                 }
             }
-        }
+        }*/
         stage('Build Docker Images') {
             steps {
                 dir('backend') {
@@ -51,5 +51,5 @@ pipeline {
                 sh 'kubectl apply -f k8s/deployment-frontend.yaml'
             }
         }
-   */ }
+    }
 }
