@@ -18,17 +18,17 @@ pipeline {
                     //sh 'mvn clean package'
                     //sh 'export MAVEN_HOME=/opt/maven'
                     //sh 'export PATH=$PATH:$MAVEN_HOME/bin'
-                    //sh 'mvn --version'
+                    sh 'mvn --version'
                 }
             }
         }
-        /*stage('SonarQube Analysis') {
+        stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     sh 'mvn sonar:sonar'
                 }
             }
-        }*/
+        }
         stage('Build Docker Images') {
             steps {
                 dir('backend') {
